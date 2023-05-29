@@ -17,7 +17,7 @@ const SignUpPage = () => {
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
 
-  const [register, isAuthenticated] = useAuth();
+  const { register, isAuthenticated } = useAuth();
 
   const handleClick = async () => {
     if (username.length === 0) {
@@ -56,7 +56,7 @@ const SignUpPage = () => {
 
   useEffect(() => {
     if(isAuthenticated) {
-      navigate('/todos')
+      navigate('/todo')
     }
   }, [navigate, isAuthenticated]);
 

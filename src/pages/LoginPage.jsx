@@ -51,7 +51,7 @@ const LoginPage = () => {
 
   useEffect(() => {
     if(isAuthenticated) {
-      navigate('/todos')
+      navigate('/todo')
     }
   }, [navigate, isAuthenticated]);
 
